@@ -1,0 +1,179 @@
+---
+import { Image } from "astro:assets";
+import data from "../assets/data.svg";
+import customize from "../assets/customize.svg";
+import conversations from "../assets/conversations.svg";
+import communicate from "../assets/communicate.svg";
+---
+
+<div id="features" class="my-60">
+	<div class="grid md:grid-cols-2 gap-y-8 mb-40">
+		<div class="max-w-screen-xl mx-auto px-5">
+			<h1 class="text-5xl font-bold lg:tracking-tight xl:tracking-tighter">
+				Vere-ai learns from data <br /> you provide
+			</h1>
+			<p class="text-lg mt-12 text-slate-600 max-w-xl">
+				Vere-ai supports text, CSVs and websites to learn as much as possible
+				about your business to give your customers a meaningful experience.
+			</p>
+		</div>
+		<div class="md:order-1">
+			<Image
+				src={data}
+				alt="Data"
+				class="w-full h-full offset-y-0 offset-x-8 object-cover"
+			/>
+		</div>
+	</div>
+
+	<div class="grid md:grid-cols-2 gap-y-8 mb-40">
+		<div class="">
+			<Image
+				src={customize}
+				alt="Customize"
+				loading="eager"
+				format="avif"
+				class="w-full h-full offset-y-0 offset-x-8 object-cover"
+			/>
+		</div>
+		<div class="max-w-screen-xl mx-auto px-5">
+			<h1 class="text-5xl font-bold lg:tracking-tight xl:tracking-tighter">
+				Customize your chatbot <br /> to match your branding
+			</h1>
+			<p class="text-lg mt-12 text-slate-600 max-w-xl">
+				Change the colors of your chat bot to fit the color them of your
+				business or product.
+			</p>
+		</div>
+	</div>
+
+	<div class="grid md:grid-cols-2 gap-y-8 mb-40">
+		<div class="max-w-screen-xl mx-auto px-5">
+			<h1 class="text-5xl font-bold lg:tracking-tight xl:tracking-tighter">
+				Manage all conversations <br /> with your customers
+			</h1>
+			<p class="text-lg mt-12 text-slate-600 max-w-xl">
+				Vere-ai supports text, CSVs and websites to learn as much as possible
+				about your business to give your customers a meaningful experience.
+			</p>
+		</div>
+		<div class="md:order-1">
+			<Image
+				src={conversations}
+				alt="Conversations"
+				class="w-full h-full offset-y-0 offset-x-8 object-cover"
+			/>
+		</div>
+	</div>
+
+	<div class="grid md:grid-cols-2 gap-y-8 mb-40">
+		<div class="">
+			<Image
+				src={communicate}
+				alt="Communicate"
+				loading="eager"
+				format="avif"
+				class="w-full h-full offset-y-0 offset-x-8 object-cover"
+			/>
+		</div>
+		<div class="max-w-screen-xl mx-auto px-5">
+			<h1 class="text-5xl font-bold lg:tracking-tight xl:tracking-tighter">
+				Communicate with your <br /> customers in real-time
+			</h1>
+			<p class="text-lg mt-12 text-slate-600 max-w-xl">
+				When your customers require human-interaction, contacting your team is
+				one-click away!
+			</p>
+		</div>
+	</div>
+</div>
+
+<!-- <div id="features">
+	<div class="grid lg:grid-cols-12 place-items-center">
+		<div class="md:order-1 md:block col-span-7">
+			<Image
+				src={data}
+				alt="Vere-ai"
+				loading="eager"
+				format="avif"
+				width="1600"
+				class="object-none object-left"
+			/>
+		</div>
+		<div class="col-end-6 col-span-3">
+			<h1 class="text-4xl font-bold lg:tracking-tight xl:tracking-tighter">
+				Vere-ai learns from data <br /> you provide
+			</h1>
+			<p class="text-lg mt-12 text-slate-600 max-w-xl">
+				Vere-ai supports text, CSVs and websites to learn as much as possible
+				about your business to give your customers a meaningful experience.
+			</p>
+		</div>
+	</div>
+
+	<div class="grid lg:grid-cols-12 place-items-center">
+		<div class="md:block col-span-7">
+			<Image
+				src={customize}
+				alt="Vere-ai"
+				loading="eager"
+				format="avif"
+				width="1600"
+				class="object-none object-right"
+			/>
+		</div>
+		<div class="col-span-5">
+			<h1 class="text-4xl font-bold lg:tracking-tight xl:tracking-tighter">
+				Customize your chatbot <br /> to match your branding
+			</h1>
+			<p class="text-lg mt-12 text-slate-600 max-w-xl">
+				Change the colors of your chat bot to fit the color them of your
+				business or product.
+			</p>
+		</div>
+	</div>
+
+	<div class="grid lg:grid-cols-12 place-items-center">
+		<div class="md:order-1 md:block col-span-7">
+			<Image
+				src={conversations}
+				alt="Vere-ai"
+				loading="eager"
+				format="avif"
+				width="1600"
+				class="object-none object-left"
+			/>
+		</div>
+		<div class="col-end-6 col-span-3">
+			<h1 class="text-4xl font-bold lg:tracking-tight xl:tracking-tighter">
+				Manage all conversations with your customers
+			</h1>
+			<p class="text-lg mt-12 text-slate-600 max-w-xl">
+				Vere-ai supports text, CSVs and websites to learn as much as possible
+				about your business to give your customers a meaningful experience.
+			</p>
+		</div>
+	</div>
+
+	<div class="grid lg:grid-cols-12 place-items-center">
+		<div class="md:block col-span-7">
+			<Image
+				src={communicate}
+				alt="Vere-ai"
+				loading="eager"
+				format="avif"
+				width="1600"
+				class="object-none object-right"
+			/>
+		</div>
+		<div class="col-span-5">
+			<h1 class="text-4xl font-bold lg:tracking-tight xl:tracking-tighter">
+				Communicate with your <br /> customers in real-time
+			</h1>
+			<p class="text-lg mt-12 text-slate-600 max-w-xl">
+				When your customers require human-interaction, contacting your team is
+				one-click away!
+			</p>
+		</div>
+	</div>
+</div> -->

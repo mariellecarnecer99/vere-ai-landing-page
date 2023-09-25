@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import heroImage from "../assets/hero.png";
+import Link from "./ui/link.astro";
+---
+
+<main
+	class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24"
+>
+	<div class="py-6 md:order-1 md:block">
+		<Image
+			src={heroImage}
+			alt="Vere-ai"
+			width="540"
+			sizes="(max-width: 800px) 100vw, 620px"
+			loading="eager"
+			format="avif"
+		/>
+	</div>
+	<div>
+		<h1
+			class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter"
+		>
+			Customer service <br />
+			<span style="color: #FF6B35;">done right</span>
+		</h1>
+		<p class="text-lg mt-12 text-slate-600 max-w-xl">
+			Boost customer experience by saving time and being more efficient with
+			Vere-ai interacting with your customers.
+		</p>
+		<div class="mt-6 flex flex-col sm:flex-row gap-3">
+			<Link
+				href="#"
+				target="_blank"
+				class="flex gap-1 items-center justify-center"
+				rel="noopener"
+			>
+				Create A Free Bot
+			</Link>
+		</div>
+	</div>
+</main>
