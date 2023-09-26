@@ -2,7 +2,10 @@
 import { YouTube } from "@astro-community/astro-embed-youtube";
 ---
 
-<div id="about" class:list={["mt-10", "mb-20", "text-center"]}>
+<div
+	id="about"
+	class:list={["mt-10", "mb-20", "text-center", "max-w-screen-xl mx-auto px-5"]}
+>
 	<h2 class="text-5xl lg:text-5xl font-bold lg:tracking-tight">Watch a demo</h2>
 	<YouTube id="acgIGT0J99U" class="my-12 flex flex-col mx-auto" />
 </div>
