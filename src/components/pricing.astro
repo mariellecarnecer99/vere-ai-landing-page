@@ -11,21 +11,27 @@ const pricing = [
 		inclusions: [
 			{
 				item: "2 chat bots only",
+				transparent: true,
 			},
 			{
 				item: "10,000 chat tokens only",
+				transparent: true,
 			},
 			{
 				item: "10,000 data tokens only",
+				transparent: true,
 			},
 			{
 				item: "Chatbot UI Customization",
+				transparent: false,
 			},
 			{
 				item: "Talk with a human",
+				transparent: false,
 			},
 			{
 				item: "GPT-3.5 only",
+				transparent: true,
 			},
 		],
 	},
@@ -36,21 +42,27 @@ const pricing = [
 		inclusions: [
 			{
 				item: "Max of 3 chat bots",
+				transparent: false,
 			},
 			{
 				item: "1,000,000 chat tokens",
+				transparent: false,
 			},
 			{
 				item: "1,000,000 data tokens",
+				transparent: false,
 			},
 			{
 				item: "Chatbot UI Customization",
+				transparent: false,
 			},
 			{
 				item: "Talk with a human",
+				transparent: false,
 			},
 			{
 				item: "Option to use latest AI Models (eg. GPT-4)",
+				transparent: false,
 			},
 		],
 	},
@@ -61,6 +73,7 @@ const pricing = [
 		inclusions: [
 			{
 				item: "Need a custom package for your business? Contact sales on how we can help!",
+				transparent: false,
 			},
 		],
 	},
@@ -72,7 +85,7 @@ const pricing = [
 		<h2 class="text-2xl font-bold text-black">Pricing</h2>
 	</div>
 
-	<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
+	<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-12 gap-16">
 		{
 			pricing.map((item) => (
 				<>
@@ -106,7 +119,13 @@ const pricing = [
 								"Need a custom package for your business? Contact sales on how we can help!" ? (
 									<div class="flex gap-4 my-3">
 										<Image alt="CheckCircle" src={CheckCircle} />
-										<li class="text-base text-black">{item.item}</li>
+										{item.transparent === true ? (
+											<li class="text-base text-black transparent">
+												{item.item}
+											</li>
+										) : (
+											<li class="text-base text-black">{item.item}</li>
+										)}
 									</div>
 								) : (
 									<li class="text-base text-black">{item.item}</li>
@@ -119,3 +138,13 @@ const pricing = [
 		}
 	</div>
 </div>
+
+<style>
+	.transparent {
+		color: transparent;
+		text-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+	}
+	.transparentImg {
+		filter: blur(1px);
+	}
+</style>
