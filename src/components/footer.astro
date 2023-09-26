@@ -1,0 +1,52 @@
+---
+import Link from "./ui/link.astro";
+
+const menuitems = [
+	{
+		title: "About",
+		path: "#about",
+	},
+	{
+		title: "Features",
+		path: "#features",
+	},
+	{
+		title: "Benefits",
+		path: "#benefits",
+	},
+	{
+		title: "Pricing",
+		path: "#pricing",
+	},
+];
+---
+
+<div class="">
+	<div class="bg-footer p-10">
+		<div class="max-w-screen-xl mx-auto px-5 mt-16">
+			<h2 class="text-white font-semibold text-4xl tracking-tight">Vere-ai</h2>
+
+			<div></div>
+			<ul class="flex flex-col lg:flex-row lg:gap-10 mt-10">
+				{
+					menuitems.map((item, index) => (
+						<>
+							<li>
+								<a href={item.path} class="flex py-2 text-white text-xl">
+									{item.title}
+								</a>
+							</li>
+						</>
+					))
+				}
+				<div class="flex items-center">
+					<Link href="#" size="md" block>CREATE A FREE BOT</Link>
+				</div>
+			</ul>
+
+			<p class="text-white text-lg my-14">
+				© 2023 Vere-ai . All rights reserved.
+			</p>
+		</div>
+	</div>
+</div>
