@@ -22,17 +22,17 @@ const menuitems = [
 ---
 
 <div class="">
-	<div class="bg-footer p-10">
-		<div class="max-w-screen-xl mx-auto px-5 mt-16">
-			<h2 class="text-white font-semibold text-4xl tracking-tight">Vere-ai</h2>
+	<div class="bg-footer py-20">
+		<div class="max-w-screen-xl mx-auto px-5">
+			<h2 class="text-footerText text-white font-bold">Vere-ai</h2>
 
 			<div></div>
-			<ul class="flex flex-col lg:flex-row lg:gap-10 mt-10">
+			<ul class="flex flex-col lg:flex-row lg:gap-7 mt-8">
 				{
 					menuitems.map((item, index) => (
 						<>
 							<li>
-								<a href={item.path} class="flex py-2 text-white text-xl">
+								<a href={item.path} class="flex py-2 text-white text-nav">
 									{item.title}
 								</a>
 							</li>
@@ -40,11 +40,13 @@ const menuitems = [
 					))
 				}
 				<div class="flex items-center">
-					<Link href="#" size="md" block>CREATE A FREE BOT</Link>
+					<Link href="#" class="text-navBtn font-medium" block>
+						CREATE A FREE BOT
+					</Link>
 				</div>
 			</ul>
 
-			<p class="text-white text-lg my-14">
+			<p class="text-white text-sm mt-16">
 				© 2023 Vere-ai . All rights reserved.
 			</p>
 		</div>

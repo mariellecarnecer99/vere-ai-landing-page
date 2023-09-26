@@ -30,7 +30,7 @@ const menuitems = [
 		<Astronav>
 			<div class="flex w-full lg:w-auto items-center justify-between">
 				<a href="/" class="text-lg"
-					><h3 class="font-bold text-2xl md:text-4xl">Vere-ai</h3>
+					><h3 class="font-bold text-xl text-logo">Vere-ai</h3>
 				</a>
 				<div class="block lg:hidden">
 					<MenuIcon class="w-4 h-4 text-gray-800" />
@@ -44,7 +44,7 @@ const menuitems = [
 								<li>
 									<a
 										href={item.path}
-										class="flex lg:px-3 py-2 text-gray-600 hover:text-gray-900"
+										class="flex lg:px-3 py-2 text-nav text-logo hover:text-orange font-normal"
 									>
 										{item.title}
 									</a>
@@ -53,8 +53,13 @@ const menuitems = [
 						))
 					}
 				</ul>
-				<div class="flex items-center ml-4 gap-4">
-					<Link href="#" size="sm" style="inverted" block>
+				<div class="flex items-center ml-5 gap-4">
+					<Link
+						href="#"
+						class="text-navBtn font-medium px-5"
+						style="inverted"
+						block
+					>
 						CREATE A FREE BOT
 					</Link>
 				</div>

@@ -69,7 +69,7 @@ const pricing = [
 
 <div id="pricing" class="max-w-screen-xl mx-auto px-5 my-40">
 	<div class="mt-16 md:mt-0">
-		<h2 class="text-5xl font-bold lg:tracking-tight">Pricing</h2>
+		<h2 class="text-2xl font-bold text-black">Pricing</h2>
 	</div>
 
 	<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
@@ -78,22 +78,26 @@ const pricing = [
 				<>
 					<div class="border-solid border-2 rounded py-6 px-8">
 						<div class="grid grid-cols-2">
-							<h3 class="font-bold text-lg">{item.plan}</h3>
+							<h3 class="font-bold text-pricing text-z-black">{item.plan}</h3>
 							{item.plan === "Basic" && (
-								<h3 class="my-auto mx-auto mr-0 px-3 py-1 text-white text-center text-sm bg-green rounded-2xl">
+								<h3 class="my-auto mx-auto mr-0 px-2 py-1 text-white text-popular text-center font-medium bg-green rounded-2xl">
 									Most Popular
 								</h3>
 							)}
 						</div>
 
-						<p class="text-3xl font-bold mt-2 mb-6">
+						<p class="text-lg font-black text-z-black mt-2 mb-5">
 							{item.price}
 							{item.price != "Contact Sales" && (
-								<span class="text-sm">/month</span>
+								<span class="text-prices font-bold">/month</span>
 							)}
 						</p>
 
-						<Link href="#" size="md" style="inverted" class="block mb-5">
+						<Link
+							href="#"
+							style="inverted"
+							class="text-navBtn font-medium block mb-5"
+						>
 							{item.button}
 						</Link>
 						<ol>
@@ -102,10 +106,10 @@ const pricing = [
 								"Need a custom package for your business? Contact sales on how we can help!" ? (
 									<div class="flex gap-4 my-3">
 										<Image alt="CheckCircle" src={CheckCircle} />
-										<li>{item.item}</li>
+										<li class="text-base text-black">{item.item}</li>
 									</div>
 								) : (
-									<li>{item.item}</li>
+									<li class="text-base text-black">{item.item}</li>
 								)
 							)}
 						</ol>
